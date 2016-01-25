@@ -1,0 +1,14 @@
+{
+    "title": "CNN Logger",
+    "source": "./",
+    "destination": "./docs",
+    "excludes": [
+        "docs",
+        "node_modules",
+        "test"
+    ],
+    "access": ["public", "protected", "private"],
+    "manual": {
+        "changelog": ["./CHANGELOG.md"]
+    }
+}
