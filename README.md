@@ -32,7 +32,7 @@
 localhost.
 
 
-##### [node][nodejs] - The most current stable version
+##### [node](https://nodejs.org) - The version specified by `.nvmrc` and `package.json`
 
 You should install this with [nvm][nvm]. Make sure you are in the root of the
 project directory and do the following.  There is a `.nvmrc` file that tells
