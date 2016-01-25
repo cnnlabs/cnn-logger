@@ -1,5 +1,7 @@
 # CNN Logger
 
+[ ![Codeship Status for jamsyoung/cnn-logger](https://codeship.com/projects/d62d3a00-a5c6-0133-99a9-1eb0603110e7/status?branch=master)](https://codeship.com/projects/129713)
+
 **Contents**
 
 - [Documentation](#documentation)
