@@ -1,13 +1,15 @@
 'use strict';
 
 const winston =require('winston');
+const winstonUDP = require('winston-udp');
+const transports = require('./transports');
 
 
 class Logger {
     constructor() {
         this.logger = new (winston.Logger)();
     }
-    addTrasport(level, transport, opts){
+    addTransport(level, transport, opts){
         this.logger.add(
             transport,
             Object.assign({}, {
@@ -20,13 +22,29 @@ class Logger {
         if (this.logger.transports.http) {
             return;
         }
-        console.log(`Adding HTTP with ${JSON.stringify(opts)}`)
         this.logger.add(
             winston.transports.Http,
             Object.assign({}, {
                 level: level || 'info'
             }, opts)
         );
+    }
+    addUDP(level, opts){
+        if (this.logger.transports.http) {
+            return;
+        }
+        this.logger.add(
+            winston.transports.UDP,
+            Object.assign({}, {
+                level: level || 'info'
+            }, opts)
+        );
+    }
+    removeUDP(){
+        if (!this.logger.transports.udp) {
+            return;
+        }
+        this.logger.remove('udp');
     }
     removeHTTP(){
         if (!this.logger.transports.http) {
@@ -56,6 +74,9 @@ class Logger {
     clearLoggers() {
         Object.keys(this.logger.transports)
         .forEach(logger => this.logger.remove(logger));
+    }
+    transports(){
+        return transports;
     }
 }
 
