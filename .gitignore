@@ -1,4 +1,5 @@
 .DS_Store
+.c9
 Dockerfile
 docs
 node_modules
