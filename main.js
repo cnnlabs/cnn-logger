@@ -1,9 +1,9 @@
 'use strict';
 
-const winston =require('winston');
+const winston =require('winston'),
+    transports = require('./transports');
+let logger;
 require('winston-udp');
-const transports = require('./transports');
-
 
 class Logger {
     constructor() {
@@ -63,7 +63,6 @@ class Logger {
             }, opts)
         );
     }
-
     removeConsole() {
         if (!this.logger.transports.console) {
             return;
@@ -81,15 +80,13 @@ class Logger {
 }
 
 
-
-const logger = new Logger();
 let consoleLoggerLevel;
-if(process.env.NODE_ENV === 'test') {
+if (process.env.NODE_ENV === 'test') {
     consoleLoggerLevel = 'error';
 } else {
     consoleLoggerLevel = process.env.CONSOLE_LOGGER_LEVEL || 'silly';
 }
+logger = new Logger;
 logger.addConsole(consoleLoggerLevel);
-
 module.exports= logger;
 module.exports.winston = winston;
