@@ -14,12 +14,13 @@ class Logger {
                 level: level || 'info'
             }, opts)
         );
-        
+
     }
     addHTTP(level, opts){
         if (this.logger.transports.http) {
             return;
         }
+        console.log(`Adding HTTP with ${JSON.stringify(opts)}`)
         this.logger.add(
             winston.transports.Http,
             Object.assign({}, {
@@ -69,4 +70,5 @@ if(process.env.NODE_ENV === 'test') {
 }
 logger.addConsole(consoleLoggerLevel);
 
-module.exports = logger;
+module.exports= logger;
+module.exports.winston = winston;
