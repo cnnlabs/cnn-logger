@@ -4,3 +4,4 @@ Dockerfile
 docs
 .idea
 node_modules
+temp

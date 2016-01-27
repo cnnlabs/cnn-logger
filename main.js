@@ -1,7 +1,7 @@
 'use strict';
 
 const winston =require('winston');
-const winstonUDP = require('winston-udp');
+require('winston-udp');
 const transports = require('./transports');
 
 
