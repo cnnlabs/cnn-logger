@@ -1,4 +1,7 @@
 .DS_Store
+.c9
 Dockerfile
 docs
+.idea
 node_modules
+temp
