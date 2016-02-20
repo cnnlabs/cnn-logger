@@ -1,7 +1,5 @@
-.DS_Store
 .c9
-Dockerfile
-docs
 .idea
+docs
 node_modules
-temp
+npm-debug.log

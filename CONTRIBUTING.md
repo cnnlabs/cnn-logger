@@ -23,24 +23,25 @@ This document will guide you though the contribution process.
 Fork the project and check out your copy locally.
 
 ```shell
-$ git clone git@github.com:TurnerBroadcasting/cnn-logger.git
-$ cd cnn-logger
-$ git remote add upstream git://github.com/TurnerBroadcasting/cnn-logger.git
+$ git clone git@github.com:ORG_NAME/REPO_NAME.git
+$ cd REPO_NAME
+$ git remote add upstream git@github.com:ORG_NAME/REPO_NAME.git
 ```
 
 
 #### Which branch?
 
-For developing new features and bug fixes, the `master` branch should be pulled
+For developing new features and bug fixes, the `develop` branch should be pulled
 and built upon.
 
 
 ### Step 2: Branch
 
-Create a feature branch and start making changes:
+Create a feature branch and start making changes.  The name of the feature
+branch should be the GitHub issue number, like `issue-1`.
 
 ```shell
-$ git checkout -b my-feature-branch -t origin/master
+$ git checkout -b issue-1
 ```
 
 
@@ -50,14 +51,15 @@ Make sure git knows your _correct_ name and email address:
 
 ```shell
 $ git config --global user.name "Your Name"
-$ git config --global user.email "your.email@turner.com"
+$ git config --global user.email "your.email@somewhere.com"
 ```
 
 A commit log should describe what changed and why.  Follow these guidelines when
 writing one:
 
 Each commit message consists of a **header**, a **body** and a **footer**.  The
-header has a special format that includes a **subsystem** and a **subject**:
+header has a special format that includes a **subsystem** and a
+**short-description**:
 
 ```
 <subsystem>: <short-description>
@@ -88,23 +90,23 @@ The body can be several paragraphs.  Try to limit the line length to around 72
 characters or so.
 
 Fixes: #12
+Reviewed-By: Your Name <your.email@somewhere.com>
 ```
 
 
 ### Step 4: Rebase
 
-Use `git rebase` (not `git merge`) to sync your work from time to time.
+Use `git rebase` (not `git merge`) to sync your work very frequently.
 
 ```shell
-$ git fetch upstream
-$ git rebase upstream/master
+$ git pull --rebase upstream develop
 ```
 
 
 ### Step 5: Test
 
-Bug fixes and features **should come with tests**.  Add your tests in the test/
-directory.  Look at other tests to see how they should be structured.
+Bug fixes and features **should come with tests**.  Add your tests in the
+`test/` directory.  Look at other tests to see how they should be structured.
 
 Run all existing tests for the project.  See the project README.md for details
 on how to run the tests.
@@ -116,10 +118,32 @@ on how to run the tests.
 $ git push origin my-feature-branch
 ```
 
-Go to https://github.com/yourusername/cnn-logger and select your feature branch.  Click
-the 'Pull Request' button and fill out the form.
+Go to https://github.com/yourusername/hapi-boilerplate and select your feature
+branch.  Click the 'Pull Request' button and fill out the form.
 
 Pull requests are usually reviewed within a few days.  If there are comments to
 address, apply your changes in a separate commit and push that to your feature
 branch.  Post a comment in the pull request afterwards; GitHub does not send out
 notifications when you add commits.
+
+
+### Summary of Git commands
+
+```text
+.                     + merge into develop
+       +---+          |
+       | R +------+---+------+------+------+  develop
+       +---+      |          |      ^
+                 A|          |     D|
+Fork   +---+      |          |      |
+of R   | F +------+---+--------------------+  develop
+       +---+          |      |      |
+                     B|     C|      |
+                      |      V      |
+                      +------+------+  issue-1
+```
+
+- A - when on F:develop - `git pull upstream develop`
+- B - when on F:develop - `git checkout -b issue-1 -t origin/develop`
+- C - when on F:issue-1 - `git pull --rebase upstream develop`
+- D - Create a Pull Request on GitHub
