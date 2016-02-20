@@ -1,40 +1,46 @@
 {
   "name": "cnn-logger",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "CNN Logger",
   "main": "main.js",
   "scripts": {
-    "docker-build": "docker build -t $(jq -r .name package.json) .",
-    "docker-run": "docker run -dp 5000:5000 $(jq -r .name package.json)",
+    "generate-authors": "tools/generate-authors.sh",
     "generate-changelog": "changelog-maker --group",
-    "generate-dockerfile": "./generate-dockerfile.sh",
     "generate-docs": "rm -rf docs && esdoc -c .esdoc.json",
     "start": "ENVIRONMENT=local PORT=5000 CONSOLE_LOGLEVEL=silly node server.js",
-    "start-docker": "npm run generate-dockerfile && npm run docker-build && npm run docker-run",
-    "test": "eslint *.js **/*.js && test/validate-json-files.sh"
+    "test": "eslint . && test/validate-json-files.sh",
+    "update-apply": "ncu -u",
+    "update-check": "ncu"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamsyoung/cnn-logger"
+    "url": "git+https://github.com/cnnlabs/cnn-logger.git"
   },
   "bugs": {
-    "url": "https://github.com/jamsyoung/cnn-logger/issues"
+    "url": "https://github.com/cnnlabs/cnn-logger/issues"
   },
-  "homepage": "https://github.com/jamsyoung/cnn-logger",
+  "homepage": "https://github.com/cnnlabs/cnn-logger",
   "engines": {
-    "node": "5.5.0",
-    "npm": "3.3.12"
+    "node": ">=4.3.1"
   },
   "dependencies": {
-    "request": "^2.67.0",
-    "winston": "^2.1.1",
+    "request": "2.69.0",
+    "winston": "2.1.1",
     "winston-udp": "0.0.5"
   },
   "devDependencies": {
-    "changelog-maker": "2.1.2",
-    "esdoc": "0.4.3",
-    "eslint": "1.10.3",
+    "changelog-maker": "2.2.0",
+    "esdoc": "0.4.5",
+    "eslint": "2.2.0",
     "jq-cli-wrapper": "0.3.0",
-    "jsonlint": "1.6.2"
-  }
+    "jsonlint": "1.6.2",
+    "npm-check-updates": "2.5.8"
+  },
+  "keywords": [
+    "cnn",
+    "cnnlabs",
+    "logger",
+    "logstash"
+  ],
+  "license": "MIT"
 }

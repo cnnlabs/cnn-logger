@@ -13,9 +13,8 @@
 
 This document contains information for Collaborators of this project regarding
 maintaining the code, documentation and issues.  This is almost exactly the same
-as the [io.js Collaborator Guide](https://github.com/nodejs/io.js/blob/master/COLLABORATOR_GUIDE.md)
-with changes to be a bit more generic and apply to projects with a single
-Project Owner (PO) versus a Technical Committee (TC).
+as the [Node.js Collaborator Guide](https://github.com/nodejs/node/blob/master/COLLABORATOR_GUIDE.md)
+with changes to better fit our needs.
 
 Collaborators should be familiar with the guidelines for new contributors in
 [CONTRIBUTING.md](./CONTRIBUTING.md) and also understand the project governance
@@ -67,10 +66,7 @@ If you are unsure about the modification and are not prepared to take full
 responsibility for the change, defer to another Collaborator.
 
 Before landing pull requests, sufficient time should be left for input from
-other Collaborators.  Leave at least 48 hours during the week and 72 hours over
-weekends to account for time differences and work schedules.  Trivial changes
-(e.g. those which fix minor bugs or improve performance without affecting API or
-causing other wide-reaching inpact) may be landed after a shorter delay.
+other Collaborators.  Trivial changes may be landed after a shorter delay.
 
 Where this is no disagreement amongst Collaborators, a pull request may be
 landed given appropriate review.  Where there is discussion amongst
@@ -137,13 +133,13 @@ many of those steps though.  Here is a summary for the typical landing of a PR.
 
 ```shell
 $ git checkout develop
-$ git fetch -p; git pull [origin|upstream] develop
-$ curl -L $ curl -L https://patch-diff.githubusercontent.com/raw/TurnerBroadcasting/cnn-logger/pull/171.patch?token=AApgjpIXve_Vup5y7nuYPhg94APftqplks5VjxMjwA%3D%3D | git am --whitespace=fix -3
-$ git rebase -i [origin|upstream]/develop
+$ git fetch -p; git pull origin develop
+$ curl -L $ curl -L https://patch-diff.githubusercontent.com/raw/ORG_NAME/REPO_NAME/pull/171.patch?token=VALID_TOKEN | git am -3
+$ git rebase -i origin/develop
 
 ... squash all commits except for the first one ...
 
-$ git push [origin|upstream] develop
+$ git push origin develop
 ```
 
 If you run into any problem, do a `git rebase --abort` and click the _**Merge**_
@@ -177,7 +173,7 @@ add `.patch` to the end of the URL and hit return.  It will redirect to a patch
 of the changes.  Copy that URL and use it below.
 
 ```shell
-$ curl -L https://patch-diff.githubusercontent.com/raw/org/cnn-logger/pull/pr-number.patch?token=encrypted-token | git am --whitespace=fix -3
+$ curl -L https://patch-diff.githubusercontent.com/raw/ORG_NAME/REPO_NAME/pull/PR_NUMBER.patch?token=VALID_TOKEN | git am -3
 ```
 
 Check and re-review the changes, they should match exactly what is in the pull
@@ -293,10 +289,10 @@ $ vim package.json
 
 $ npm run generate-changelog
 
-> cnn-logger@0.29.0 generate-changelog /Users/jyoung/dev/cnn-logger
+> REPO_NAME@0.29.0 generate-changelog /Users/jyoung/dev/REPO_NAME
 > changelog-maker --group
 
-* [[`47d94cbca5`](https://github.com/TurnerBroadcasting/cnn-logger/commit/47d94cbca5)] - update candidate info (James Young)
+* [[`47d94cbca5`](https://github.com/ORG_NAME/REPO_NAME/commit/47d94cbca5)] - update candidate info (AUTHOR)
 
 ... copy the commit lines, they start with * ...
 
@@ -316,12 +312,7 @@ $ git push origin develop
 ```
 
 Copy the CHANGELOG.md entry you made earlier.  Add the release notes to GitHub.
-Goto https://github.com/TurnerBroadcasting/cnn-logger/tags and click
+Goto https://github.com/ORG_NAME/REPO_NAME/tags and click
 _**Add Release Notes**_ next to the tag that was pushed up earlier.
-
-Copy the release notes from the GitHub website; The html, not the markdown you
-copied earlier.  Paste that into an email addressed to
-CNNProductionNotification@turner.com with a Subject of
-`Production Deployment: cnn-logger-[version-number]`.
 
 Publish the released version to npm.
