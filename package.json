@@ -1,6 +1,6 @@
 {
   "name": "cnn-logger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CNN Logger",
   "main": "main.js",
   "scripts": {
