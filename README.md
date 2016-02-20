@@ -25,29 +25,10 @@
 ## Local development
 
 
-### Requirements
+## Requirements
 
-
-##### [nvm][nvm] - a reasonably current version
-
-`nvm` will be used to manage the node versions installed on your
-localhost.
-
-
-##### [node](https://nodejs.org) - The version specified by `.nvmrc` and `package.json`
-
-You should install this with [nvm][nvm]. Make sure you are in the root of the
-project directory and do the following.  There is a `.nvmrc` file that tells
-`nvm` what version to install and use.  The first `nvm install` command is only
-needed the first time you try to use a version that has not been installed on
-your system yet.
-
-```shell
-$ nvm install
-
-$ node --version
-v5.5.0
-```
+A current LTS or Stable version of [Node.js](https://nodejs.org).  We recommend
+using [nvm](https://github.com/creationix/nvm#readme) to manage node versions.
 
 
 ### Local install
@@ -78,7 +59,7 @@ $ npm start
 
 - **ENVIRONMENT** - _REQUIRED_ - Should be `ref` or `prod`.  Anything
   passed in that does not match this list is treated as `ref`.  This sets the
-  group of project configuration to use. (See config.js)
+  group of project configurations to use. (See [config.js](./config.js))
 
 - **PORT** - _REQUIRED_ - The port that this application will run on.  `5000` is
   a common value, but you can use any valid port number that is available on
@@ -93,30 +74,10 @@ $ open docs/index.html
 ```
 
 
-## Contributing
-
-If you would like to contribute, just fork and submit a pull request.  Please
-review the [contributing guidelines](./CONTRIBUTING.md) first.
-
-
-## Project Owner
-
-James Young <james.young@turner.com) (@jamsyoung) is the current Project Owner
-of this repository.  The project owner is responsible for the implementation of
-this project.
-
-
-## Current Project Team Members
-
-This is a list of people directly responsible for the implementation of this
-project.  For more information about the governance of this project, see
-[GOVERNANCE.md](./GOVERNANCE.md).
-
-- James Young <james.young@turner.com> (@jamsyoung) - Applications Architect
-
-Collaborators follow the [COLLABORATOR_GUIDE.md](./COLLABORATOR_GUIDE.md) in
-maintaining this project.
-
+![node](https://img.shields.io/node/v/cnn-logger.svg?style=flat-square)
+[![npm](https://img.shields.io/npm/v/cnn-logger.svg?style=flat-square)](https://www.npmjs.com/package/cnn-logger)
+[![npm-downloads](https://img.shields.io/npm/dm/cnn-logger.svg?style=flat-square)](https://www.npmjs.com/package/cnn-logger)
+[![dependency-status](https://gemnasium.com/cnnlabs/cnn-logger.svg)](https://gemnasium.com/cnnlabs/cnn-logger)
 
 
 
