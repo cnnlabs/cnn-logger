@@ -1,27 +1,32 @@
 'use strict';
 
-const winston =require('winston'),
+const winston = require('winston'),
     transports = require('./transports');
-let logger;
+
+let logger,
+    consoleLoggerLevel;
+
 require('winston-udp');
 
 class Logger {
     constructor() {
         this.logger = new (winston.Logger)();
     }
-    addTransport(level, transport, opts){
+
+    addTransport(level, transport, opts) {
         this.logger.add(
             transport,
             Object.assign({}, {
                 level: level || 'info'
             }, opts)
         );
-
     }
-    addHTTP(level, opts){
+
+    addHTTP(level, opts) {
         if (this.logger.transports.http) {
             return;
         }
+
         this.logger.add(
             winston.transports.Http,
             Object.assign({}, {
@@ -29,10 +34,12 @@ class Logger {
             }, opts)
         );
     }
-    addUDP(level, opts){
+
+    addUDP(level, opts) {
         if (this.logger.transports.http) {
             return;
         }
+
         this.logger.add(
             winston.transports.UDP,
             Object.assign({}, {
@@ -40,22 +47,28 @@ class Logger {
             }, opts)
         );
     }
-    removeUDP(){
+
+    removeUDP() {
         if (!this.logger.transports.udp) {
             return;
         }
+
         this.logger.remove('udp');
     }
-    removeHTTP(){
+
+    removeHTTP() {
         if (!this.logger.transports.http) {
             return;
         }
+
         this.logger.remove('http');
     }
+
     addConsole(level, opts) {
         if (this.logger.transports.console) {
             return;
         }
+
         this.logger.add(
             winston.transports.Console,
             Object.assign({}, {
@@ -63,30 +76,34 @@ class Logger {
             }, opts)
         );
     }
+
     removeConsole() {
         if (!this.logger.transports.console) {
             return;
         }
+
         this.logger.remove('console');
     }
 
     clearLoggers() {
-        Object.keys(this.logger.transports)
-        .forEach(logger => this.logger.remove(logger));
+        Object.keys(this.logger.transports).forEach((logger) => this.logger.remove(logger));
     }
-    transports(){
+
+    transports() {
         return transports;
     }
 }
 
 
-let consoleLoggerLevel;
 if (process.env.NODE_ENV === 'test') {
     consoleLoggerLevel = 'error';
 } else {
     consoleLoggerLevel = process.env.CONSOLE_LOGGER_LEVEL || 'silly';
 }
+
 logger = new Logger;
+
 logger.addConsole(consoleLoggerLevel);
-module.exports= logger;
+
+module.exports = logger;
 module.exports.winston = winston;
