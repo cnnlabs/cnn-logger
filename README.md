@@ -8,7 +8,8 @@ Replaces `console.log()` with `log.[log-level]()` and sends logs to
 [![dependency-status](https://gemnasium.com/cnnlabs/cnn-logger.svg)](https://gemnasium.com/cnnlabs/cnn-logger)
 [![build-status-master](https://img.shields.io/travis/cnnlabs/cnn-logger/master.svg?style=flat-square&label=master)](https://travis-ci.org/cnnlabs/cnn-logger)
 [![build-status-develop](https://img.shields.io/travis/cnnlabs/cnn-logger/master.svg?style=flat-square&label=develop)](https://travis-ci.org/cnnlabs/cnn-logger)
-
+[![npm](https://img.shields.io/npm/v/cnn-logger.svg?style=flat-square)](https://www.npmjs.com/package/cnn-logger)
+[![npm-downloads](https://img.shields.io/npm/dm/cnn-logger.svg?style=flat-square)](https://www.npmjs.com/package/cnn-logger)
 
 
 ## Requirements
