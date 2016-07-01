@@ -1,13 +1,17 @@
 {
   "name": "cnn-logger",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "CNN Logger",
-  "main": "main.js",
+  "main": "lib/logger.js",
+  "directories": {
+    "example": "./example",
+    "lib": "./lib",
+    "test": "./test"
+  },
   "scripts": {
     "generate-authors": "tools/generate-authors.sh",
     "generate-changelog": "changelog-maker --group",
     "generate-docs": "rm -rf docs && esdoc -c .esdoc.json",
-    "start": "ENVIRONMENT=local PORT=5000 CONSOLE_LOGLEVEL=silly node server.js",
     "test": "eslint . && test/validate-json-files.sh",
     "update-apply": "ncu -u",
     "update-check": "ncu"
@@ -21,26 +25,27 @@
   },
   "homepage": "https://github.com/cnnlabs/cnn-logger",
   "engines": {
-    "node": ">=4.3.1"
+    "node": ">=4.4.7"
   },
   "dependencies": {
-    "request": "2.69.0",
-    "winston": "2.1.1",
-    "winston-udp": "0.0.5"
+    "nconf": "0.8.4",
+    "winston": "2.2.0",
+    "winston-logzio": "1.0.0"
   },
   "devDependencies": {
-    "changelog-maker": "2.2.0",
-    "esdoc": "0.4.5",
-    "eslint": "2.2.0",
-    "jq-cli-wrapper": "0.3.0",
+    "changelog-maker": "2.2.3",
+    "esdoc": "0.4.7",
+    "eslint": "2.13.1",
     "jsonlint": "1.6.2",
-    "npm-check-updates": "2.5.8"
+    "npm-check-updates": "2.6.8"
   },
   "keywords": [
     "cnn",
     "cnnlabs",
     "logger",
-    "logstash"
+    "logstash",
+    "logz.io",
+    "winston"
   ],
-  "license": "MIT"
+  "license": "Apache-2.0"
 }
