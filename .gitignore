@@ -1,5 +1,8 @@
 .c9
 .idea
+coverage
 docs
 node_modules
 npm-debug.log
+configKeys.json
+logs.log
