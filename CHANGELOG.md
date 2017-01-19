@@ -1,5 +1,16 @@
 # CNN Logger ChangeLog
 
+## 2017-01-19, Version 1.1.0, @jamsyoung
+### Notable changes
+- Made logging to file optional and removed the one that was created no matter what.
+
+
+### Commits
+* [[`4eb56b7483`](https://github.com/cnnlabs/cnn-logger/commit/4eb56b7483)] - **example**: add example (James Young)
+* [[`5bc95bc543`](https://github.com/cnnlabs/cnn-logger/commit/5bc95bc543)] - **(SEMVER-MINOR)** **logger**: fix issue with local file being generated and add support for array of tags (DrEnter) [#7](https://github.com/cnnlabs/cnn-logger/pull/7)
+
+
+
 
 ## 2016-07-01, Version 1.0.0, @jamsyoung
 
