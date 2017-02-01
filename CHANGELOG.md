@@ -1,6 +1,6 @@
 # CNN Logger ChangeLog
 
-## 2017-02-01, Version 1.3.0, @jamsyoung
+## 2017-02-01, Version 1.2.1, @jamsyoung
 ### Notable changes
 - Update dependencies
 
