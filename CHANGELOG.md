@@ -1,5 +1,14 @@
 # CNN Logger ChangeLog
 
+## 2017-02-01, Version 1.3.0, @jamsyoung
+### Notable changes
+- Update dependencies
+
+### Commits
+* [[`38fe0c3eda`](https://github.com/cnnlabs/cnn-logger/commit/38fe0c3eda)] - **deps**: update winston-logzio dep from 1.0.0 to 1.0.3 (Matthew Crutchfield) [#9](https://github.com/cnnlabs/cnn-logger/pull/9)
+
+
+
 ## 2017-01-19, Version 1.1.0, @jamsyoung
 ### Notable changes
 - Made logging to file optional and removed the one that was created no matter what.
