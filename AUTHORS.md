@@ -1,6 +1,6 @@
 # Authors ordered by first contribution.
 
-James Young <jmeyoung@gmail.com>
+Jamie Young <james.young@turner.com>
 MatthewJon <matthew.drooker@gmail.com>
 James Drenter <james.drenter@turner.com>
 Matthew Crutchfield <mtcrutch@gmail.com>

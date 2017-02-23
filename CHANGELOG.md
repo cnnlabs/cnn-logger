@@ -1,5 +1,19 @@
 # CNN Logger ChangeLog
 
+## 2017-02-23, Version 1.4.0, @jamsyoung
+### Notable changes
+- pass in log level via options
+
+🐭  - What happened to 1.3.0?
+😳  - Well, @jamsyoung did the tag wrong on 1.2.1.
+     We are just not gonna talk about 1.3.0 anymore...
+
+### Commits
+
+* [[`23db0bb766`](https://github.com/cnnlabs/cnn-logger/commit/23db0bb766)] - add support for passing log level via options (#10) (Matthew Crutchfield) [#10](https://github.com/cnnlabs/cnn-logger/pull/10)
+
+
+
 ## 2017-02-01, Version 1.2.1, @jamsyoung
 ### Notable changes
 - Update dependencies
