@@ -1,6 +1,6 @@
 {
   "name": "cnn-logger",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "CNN Logger",
   "main": "lib/logger.js",
   "directories": {
