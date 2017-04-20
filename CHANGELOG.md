@@ -1,5 +1,14 @@
 # CNN Logger ChangeLog
 
+## 2017-04-05, Version 1.5.0, @drenter
+### Notable changes
+- Add do_<level> booleans, like do_debug and do_warn, to tell you if that level is logging.
+
+### Commits
+* [[`601f38ec7a`](https://github.com/cnnlabs/cnn-logger/commit/601f38ec7a)] - Add do_<level> booleans, like do_debug and do_warn, to tell you if that level is logging.  Do a better job with setting the log levels. (#11) (James Drenter) [#11](https://github.com/cnnlabs/cnn-logger/pull/11)
+
+
+
 ## 2017-02-23, Version 1.4.0, @jamsyoung
 ### Notable changes
 - pass in log level via options
@@ -9,7 +18,6 @@
      We are just not gonna talk about 1.3.0 anymore...
 
 ### Commits
-
 * [[`23db0bb766`](https://github.com/cnnlabs/cnn-logger/commit/23db0bb766)] - add support for passing log level via options (#10) (Matthew Crutchfield) [#10](https://github.com/cnnlabs/cnn-logger/pull/10)
 
 
