@@ -1,4 +1,4 @@
-# cnnd-logger
+# cnn-logger
 A logging library for the data services team to help us have consistent logs across our apps.
 
 ## Usage

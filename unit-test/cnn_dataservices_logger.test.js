@@ -1,7 +1,7 @@
 const Chai = require('chai');
 const CnnLogger = require('../index.js');
 
-describe('v', () => {
+describe('CnnLogger', () => {
     it('When a logger is created with no Logzio token then logzio logger in the logger instance should be null, and not send logs to logz.io.', (done) => {
         const logger = new CnnLogger({
             
