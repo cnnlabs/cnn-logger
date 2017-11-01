@@ -3,15 +3,15 @@ const LogLevelChecker = require('./utils/log_level_checker'),
     LogzioLogger = require('./utils/logzio_wrapper');
 
 class CNNLogger {
-    constructor(...args) {
+    constructor() {
         let config = null;
 
         // This code is to make this a drop in replacement of the NPM package Debug's pattern matching logging.
-        if (args.length == 2 && typeof args[0] === 'string') {
-            config = args[1] || {};
-            config.DEBUG_TARGET = args[0];
+        if (arguments.length == 2 && typeof arguments[0] === 'string') {
+            config = arguments[1] || {};
+            config.DEBUG_TARGET = arguments[0];
         } else {
-            config = args[0] || {};
+            config = arguments[0] || {};
         }
 
         this.config = Object.assign({
