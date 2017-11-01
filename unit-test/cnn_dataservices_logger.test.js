@@ -1,3 +1,4 @@
+'use strict';
 const Chai = require('chai');
 const CnnLogger = require('../index.js');
 

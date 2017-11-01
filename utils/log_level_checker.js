@@ -1,3 +1,4 @@
+'use strict';
 const LOG_LEVELS = ['debug',
         'info',
         'warn',

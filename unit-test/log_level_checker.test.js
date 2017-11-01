@@ -1,3 +1,4 @@
+'use strict';
 const Chai = require('chai');
 const LogLevelChecker = require('../utils/log_level_checker');
 

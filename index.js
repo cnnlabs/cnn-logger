@@ -1,3 +1,4 @@
+'use strict';
 const LogLevelChecker = require('./utils/log_level_checker'),
     LogzioLogger = require('./utils/logzio_wrapper');
 
