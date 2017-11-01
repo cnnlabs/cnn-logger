@@ -14,9 +14,9 @@ Options
 */
 
 class LogzioWrapper {
-    constructor (config) {
-        if(!config.LOGZIO_TYPE) {
-            throw "To create an instance of LogzioWrapper you must provide ";
+    constructor(config) {
+        if (!config.LOGZIO_TYPE) {
+            throw 'To create an instance of LogzioWrapper you must provide ';
         }
         this.logger = require('logzio-nodejs').createLogger({
             token: config.LOGZIO_TOKEN,
@@ -25,11 +25,11 @@ class LogzioWrapper {
         });
     }
 
-    log (data) {
-        if(!!data) {
-            logger.log(data);
-        }        
+    log(data) {
+        if (data) {
+            this.logger.log(data);
+        }
     }
-};
+}
 
 module.exports = LogzioWrapper;
