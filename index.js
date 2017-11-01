@@ -1,7 +1,7 @@
 const LogLevelChecker = require('./utils/log_level_checker');
 const LogzioLogger = require('./utils/logzio_wrapper');
 
-class CNNDataServicesLogger {
+class CNNLogger {
     constructor (...args) {
         let config = null;
         
@@ -17,7 +17,7 @@ class CNNDataServicesLogger {
             LOG_LEVEL: config.LOG_LEVEL || process.env.LOG_LEVEL || 'off',
             LOGZIO_LOG_LEVEL: config.LOGZIO_LOG_LEVEL || process.env.LOGZIO_LOG_LEVEL || process.env.LOG_LEVEL || 'off',
             LOGZIO_TOKEN: config.LOGZIO_TOKEN || process.env.LOGZIO_TOKEN || null,
-            TAG: config.TAG || process.env.TAG || 'cnn-dataservices-logger',
+            TAG: config.TAG || process.env.TAG || 'cnn-logger',
             /* Question: do we want to have target tags, this brings the functionality of the 
                debug node module that allows us to target specific tags for logging by providing a regex. */
             DEBUG: config.DEBUG || process.env.DEBUG || null,
@@ -96,4 +96,4 @@ class CNNDataServicesLogger {
 
 }
 
-module.exports = CNNDataServicesLogger;
+module.exports = CNNLogger;

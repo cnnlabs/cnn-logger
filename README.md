@@ -1,18 +1,18 @@
-# cnnd_dataservices_logger
+# cnnd-logger
 A logging library for the data services team to help us have consistent logs across our apps.
 
 ## Usage
 >  The logger looks in three places for values to the properties for the config object described below. First in the config object passed into the constructor, then in environment variables, and finally a default value is hard coded for each property if none is found. **__Please see below for a complete list of configuration properties.__**
 
 ```javascript
-const logger = new require('cnn-dataservices-logger')({
+const logger = new require('cnn-logger')({
     // config data referenced below. Case matters so make sure your property names are upper case...
 });
 ```
 > This is the first use of the constructor where the sole parameter passed in is a config object consisting of the properties described below.
 
 ```javascript
-const logger = new require('cnn-dataservices-logger')('app:section:component', {
+const logger = new require('cnn-logger')('app:section:component', {
     // config data referenced below. Case matters so make sure your property names are upper case...
 });
 ```
@@ -52,7 +52,7 @@ logger.assert(('boolean expression' !== false), 'my message', {
     * If this is not provided then the logger will not attempt to log messages to logz.io
 * `LOGZIO_LOG_LEVEL` - default value: `'off'`
     * Basically the same as `LOG_LEVEL`, but got checking if messages should be logged to Logzio. 
-* `TAG` - default value: `'cnn-dataservices-logger'`
+* `TAG` - default value: `'cnn-logger'`
     * The tag associated with each log message.
 * `DEBUG` - default value: `null`
     * if provided will be used as a regex to check the `DEBUG_TARGET` of the logger and only log messages that match the regex or match the log level.
