@@ -1,6 +1,6 @@
 {
   "name": "cnn-logger",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "description": "A logging library for the data services team to help us have consistent logs across our apps.",
   "main": "index.js",
   "scripts": {
