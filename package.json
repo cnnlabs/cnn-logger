@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/turnercode/cnn-logger.git"
+    "url": "git+https://github.com/cnnlabs/cnn-logger.git"
   },
   "keywords": [
     "logging"
@@ -16,9 +16,9 @@
   "author": "Calvin L Echols",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/turnercode/cnn-logger/issues"
+    "url": "https://github.com/cnnlabs/cnn-logger/issues"
   },
-  "homepage": "https://github.com/turnercode/cnn-logger#readme",
+  "homepage": "https://github.com/cnnlabs/cnn-logger#readme",
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^4.8.0",
