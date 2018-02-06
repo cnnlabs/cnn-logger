@@ -1,51 +1,30 @@
 {
   "name": "cnn-logger",
   "version": "1.5.0",
-  "description": "CNN Logger",
-  "main": "lib/logger.js",
-  "directories": {
-    "example": "./example",
-    "lib": "./lib",
-    "test": "./test"
-  },
+  "description": "A logging library for the data services team to help us have consistent logs across our apps.",
+  "main": "index.js",
   "scripts": {
-    "generate-authors": "tools/generate-authors.sh",
-    "generate-changelog": "changelog-maker --group",
-    "generate-docs": "rm -rf docs && esdoc -c .esdoc.json",
-    "test": "eslint . && test/validate-json-files.sh",
-    "update-apply": "ncu -u",
-    "update-check": "ncu"
+    "test": "mocha ./unit-test/*.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cnnlabs/cnn-logger.git"
   },
+  "keywords": [
+    "logging"
+  ],
+  "author": "Calvin L Echols",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cnnlabs/cnn-logger/issues"
   },
-  "homepage": "https://github.com/cnnlabs/cnn-logger",
-  "engines": {
-    "node": ">=4.4.7"
+  "homepage": "https://github.com/cnnlabs/cnn-logger#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.8.0",
+    "mocha": "^4.0.0"
   },
   "dependencies": {
-    "nconf": "0.8.4",
-    "winston": "2.2.0",
-    "winston-logzio": "1.0.3"
-  },
-  "devDependencies": {
-    "changelog-maker": "2.2.3",
-    "esdoc": "0.4.7",
-    "eslint": "2.13.1",
-    "jsonlint": "1.6.2",
-    "npm-check-updates": "2.6.8"
-  },
-  "keywords": [
-    "cnn",
-    "cnnlabs",
-    "logger",
-    "logstash",
-    "logz.io",
-    "winston"
-  ],
-  "license": "Apache-2.0"
+    "logzio-nodejs": "^0.4.4"
+  }
 }
