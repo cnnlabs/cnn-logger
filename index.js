@@ -85,7 +85,7 @@ class CNNLogger {
 
     _shouldLogToLogger(logger, logLevelChecker, logLevel, overrideLogLevel = false) {
         let shouldLog = false;
-        if (this._tagTarget !== null) {
+        if (this._tag !== null) {
             shouldLog = (!!logger) && (this._validateDebug() === true ||
                                        overrideLogLevel === true);
         } else {
