@@ -30,7 +30,7 @@
   "dependencies": {
     "nconf": "0.8.4",
     "winston": "2.2.0",
-    "winston-logzio": "1.0.3"
+    "winston-logzio": "1.0.5"
   },
   "devDependencies": {
     "changelog-maker": "2.2.3",
