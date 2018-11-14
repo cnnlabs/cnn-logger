@@ -1,5 +1,15 @@
 # CNN Logger ChangeLog
 
+## 2018-11-13, Version 2.0.0, @drenter
+### Notable changes
+- Update to support Winston 3.x.
+- Update Node and other dependencies.
+
+### Commits
+* [[`4c16177fb8`](https://github.com/cnnlabs/cnn-logger/commit/4c16177fb8)] - Update to support Winston 3.x.  Update minimum Node version and other dependencies. (James Drenter)
+
+
+
 ## 2017-04-05, Version 1.5.0, @drenter
 ### Notable changes
 - Add do_<level> booleans, like do_debug and do_warn, to tell you if that level is logging.
