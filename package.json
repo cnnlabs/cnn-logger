@@ -1,6 +1,6 @@
 {
   "name": "cnn-logger",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "CNN Logger",
   "main": "lib/logger.js",
   "directories": {
@@ -29,13 +29,13 @@
   },
   "dependencies": {
     "nconf": "0.10.0",
-    "winston": "3.1.0",
-    "winston-logzio": "3.0.2"
+    "winston": "3.2.1",
+    "winston-logzio": "4.0.1"
   },
   "devDependencies": {
     "changelog-maker": "2.3.0",
     "esdoc": "1.1.0",
-    "eslint": "5.9.0",
+    "eslint": "5.13.0",
     "jsonlint": "1.6.3"
   },
   "keywords": [
