@@ -14,7 +14,9 @@
     "generate-docs": "rm -rf docs && esdoc -c .esdoc.json",
     "test": "eslint . && test/validate-json-files.sh",
     "update-apply": "ncu -u",
-    "update-check": "ncu"
+    "update-check": "ncu",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,8 @@
   "dependencies": {
     "nconf": "0.10.0",
     "winston": "3.1.0",
-    "winston-logzio": "3.0.2"
+    "winston-logzio": "3.0.2",
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "changelog-maker": "2.3.0",
@@ -46,5 +49,6 @@
     "logz.io",
     "winston"
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "snyk": true
 }
