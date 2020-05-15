@@ -1,6 +1,6 @@
 {
   "name": "cnn-logger",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "CNN Logger",
   "main": "lib/logger.js",
   "directories": {
@@ -25,17 +25,18 @@
   },
   "homepage": "https://github.com/cnnlabs/cnn-logger",
   "engines": {
-    "node": ">=8.12.0"
+    "node": ">=10.12.0"
   },
   "dependencies": {
     "nconf": "0.10.0",
     "winston": "3.2.1",
-    "winston-logzio": "4.0.1"
+    "winston-logzio": "5.0.4"
   },
   "devDependencies": {
-    "changelog-maker": "2.3.0",
+    "acorn": "7.2.0",
+    "changelog-maker": "2.4.0",
     "esdoc": "1.1.0",
-    "eslint": "5.13.0",
+    "eslint": "7.0.0",
     "jsonlint": "1.6.3"
   },
   "keywords": [
@@ -46,5 +47,9 @@
     "logz.io",
     "winston"
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "resolutions": {
+    "**/**/marked": "0.8.2",
+    "**/**/minimist": "1.2.5"
+  }
 }

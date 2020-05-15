@@ -17,7 +17,7 @@ Replaces `console.log()` with `log.[log-level]()` and sends logs to
 Read these "_requirements_" as "_only tested with_".
 
 - [Node.js](https://nodejs.org/) LTS or higher
-
+- [Yarn](https://yarnpkg.com/)
 
 
 ## Usage
@@ -34,13 +34,13 @@ You can generate and view the docs locally with the commands below.  The `open`
 command will only work on macOS.
 
 ```shell
-$ npm run generate-docs
+$ yarn run generate-docs
 $ open docs/index.html
 ```
 
 
 
-## NPM scripts
+## Yarn scripts
 
 - `generate-authors` - Generates [AUTHORS.md](./AUTHORS.md).
 - `generate-changelog` - Generates output to put in [CHANGELOG.md](./CHANGELOG.md).

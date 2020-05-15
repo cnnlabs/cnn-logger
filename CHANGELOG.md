@@ -1,5 +1,15 @@
 # CNN Logger ChangeLog
 
+## 2020-05-15, Version 2.1.0, @drenter
+### Notable changes
+- Update dependencies to address security notes.
+- Update Node and replace npm with yarn.
+
+### Commits
+* [[`5db9ccd665`](https://github.com/cnnlabs/cnn-logger/commit/5db9ccd665)] - Update Node and dependencies, use Yarn. (James Drenter)
+
+
+
 ## 2018-11-13, Version 2.0.0, @drenter
 ### Notable changes
 - Update to support Winston 3.x.
