@@ -14,7 +14,9 @@
     "generate-docs": "rm -rf docs && esdoc -c .esdoc.json",
     "test": "eslint . && test/validate-json-files.sh",
     "update-apply": "ncu -u",
-    "update-check": "ncu"
+    "update-check": "ncu",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,8 @@
   "dependencies": {
     "nconf": "0.10.0",
     "winston": "3.2.1",
-    "winston-logzio": "5.0.4"
+    "winston-logzio": "5.0.4",
+    "snyk": "^1.321.0"
   },
   "devDependencies": {
     "acorn": "7.2.0",
@@ -51,5 +54,6 @@
   "resolutions": {
     "**/**/marked": "0.8.2",
     "**/**/minimist": "1.2.5"
-  }
+  },
+  "snyk": true
 }
