@@ -28,7 +28,7 @@
     "node": ">=10.12.0"
   },
   "dependencies": {
-    "nconf": "0.10.0",
+    "nconf": "0.11.0",
     "winston": "3.2.1",
     "winston-logzio": "5.0.4"
   },
